@@ -4,6 +4,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 
 load_dotenv()
 
@@ -38,13 +41,17 @@ driver.get(login_url)
 driver.get_screenshot_as_file("1_login_page.png")
 
 # Find the login and password input fields and fill them
-login_field = driver.find_element('name', 'Email')
-password_field = driver.find_element('name', 'Password')
-login_field.send_keys(login)
-password_field.send_keys(password)
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, 'Email'))).send_keys(login)
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME,'Password'))).send_keys(password)
+WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'g-recaptcha'))).click()
+
+# login_field = driver.find_element('name', 'Email')
+# password_field = driver.find_element('name', 'Password')
+# login_field.send_keys(login)
+# password_field.send_keys(password)
 
 # Submit the form (you can replace this with actual form submission method if needed)
-password_field.send_keys(Keys.RETURN)
+# password_field.send_keys(Keys.RETURN)
 
 # Allow some time for the page to load and the login to complete
 time.sleep(3)
