@@ -15,7 +15,7 @@ search_text = "Stante l'elevata richiesta i posti disponibili per il servizio sc
 
 # Set up Chrome options for headless mode
 chrome_options = Options()
-# chrome_options.add_argument("--headless")
+chrome_options.add_argument("--headless")
 
 # Initialize the Selenium webdriver with the configured options
 driver = webdriver.Chrome(options=chrome_options)
