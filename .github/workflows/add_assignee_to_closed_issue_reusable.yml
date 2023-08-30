@@ -3,7 +3,7 @@ name: Add assignee to closed issue
 
 on:
   issues:
-    types: [closed]
+    types: [opened]
 
 jobs:
   add_assignee_to_closed_issue:
