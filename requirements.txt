@@ -1,3 +1,4 @@
 ipdb==0.13.13
 selenium==4.11.2
 python-dotenv==1.0.0
+undetected-chromedriver==3.5.3
