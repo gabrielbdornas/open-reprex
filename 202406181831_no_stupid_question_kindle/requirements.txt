@@ -1,0 +1,5 @@
+ipdb==0.13.13
+beautifulsoup4==4.12.3
+requests==2.32.3
+markdownify==0.12.1
+markdown-pdf==1.3
