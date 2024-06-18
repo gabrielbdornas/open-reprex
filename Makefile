@@ -12,4 +12,5 @@ mkdir: ## Run "make mkdir FOLDER=my_folder_name" to create your new reprex folde
 	@mkdir $(TIMESTAMP)_$(FOLDER)
 	@touch $(TIMESTAMP)_$(FOLDER)/requirements.txt
 	@touch $(TIMESTAMP)_$(FOLDER)/README.md
+	@touch $(TIMESTAMP)_$(FOLDER)/main.py
 	@python3 -m venv $(TIMESTAMP)_$(FOLDER)/venv
