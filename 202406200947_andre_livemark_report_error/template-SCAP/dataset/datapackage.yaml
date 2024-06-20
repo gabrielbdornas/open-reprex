@@ -1,0 +1,187 @@
+profile: data-package
+resources:
+  - dialect: schemas/dialect.json
+    encoding: utf-8-sig
+    format: csv
+    hashing: md5
+    name: teste-scap
+    path: data/teste-SCAP.csv
+    profile: tabular-data-resource
+    schema:
+      fields:
+        - name: nome
+          type: string
+          title: Nome do servidor
+          constraints:
+            required: true
+        - name: masp
+          type: string
+          title: MASP com dígito verificador
+          constraints:
+            required: true
+        - name: adm
+          type: integer
+          title: Número da admissão
+          constraints:
+            required: true
+            enum:
+            - '1'
+            - '2'
+            - '3'
+            - '4'
+            - '5'
+            - '6'
+        - name: carreira
+          type: string
+          title: Sigla do nome da carreira
+          constraints:
+            required: true
+            enum:
+            - 'ANE'
+            - 'ATB'
+            - 'EEB'
+            - 'PEB'
+            - 'TDE'
+        - name: nivelatual
+          type: string
+          title: Nível ATUAL da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'I'
+            - 'II'
+            - 'III'
+            - 'IV'
+            - 'V'
+            - 'VI'
+        - name: grau_atual
+          type: string
+          title: Grau ATUAL da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+            - 'E'
+            - 'F'
+            - 'G'
+            - 'H'
+            - 'I'
+            - 'J'
+            - 'K'
+            - 'L'
+            - 'M'
+            - 'N'
+            - 'O'
+            - 'P'
+        - name: nivelnovo
+          type: string
+          title: Nível NOVO da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'I'
+            - 'II'
+            - 'III'
+            - 'IV'
+            - 'V'
+            - 'VI'
+        - name: graunovo
+          type: string
+          title: Grau NOVO da carreira do servidor
+          constraints:
+            required: true
+            enum:
+            - 'A'
+            - 'B'
+            - 'C'
+            - 'D'
+            - 'E'
+            - 'F'
+            - 'G'
+            - 'H'
+            - 'I'
+            - 'J'
+            - 'K'
+            - 'L'
+            - 'M'
+            - 'N'
+            - 'O'
+            - 'P'
+        - name: grnatureza
+          type: integer
+          title: Grupo da natureza da promoção ou progressão
+          constraints:
+            required: true
+            enum:
+            - '33'
+        - name: sqnatureza
+          type: integer
+          title: Sequencial da natureza da progressão ou progressão
+          constraints:
+            enum:
+            - '61' 
+            - '63' 
+            - '138' 
+            - '145' 
+            - '147'
+            - '156'
+            - '157'
+            - '161'
+            - '261'
+            - '363'
+            - '48'
+            - '60'
+            - '62'
+            - '146'
+            - '148'
+            - '162'
+            - '263'
+        - name: dtpublicacao
+          type: date
+          constraints:
+            required: true
+        - name: dtinicio
+          type: date
+          constraints:
+            required: true
+        - name: simbolo
+          type: string
+          title: Símbolo do vencimento correspondente ao nível da carreira
+          description: Corresponde ao atual, para progressão, porque nõa muda nível. E, para promoção, será o nível novo. 
+          constraints:
+            required: true
+            enum:
+            - 'ANE1'
+            - 'ANE2'
+            - 'ANE3'
+            - 'ANE4'
+            - 'ANE5'
+            - 'ANE6'
+            - 'ATB1'
+            - 'ATB2'
+            - 'ATB3'
+            - 'ATB4'
+            - 'ATB5'
+            - 'ATB6'
+            - 'EEB1'
+            - 'EEB2'
+            - 'EEB3'
+            - 'EEB4'
+            - 'EEB5'
+            - 'EEB6'
+            - 'PEB1'
+            - 'PEB2'
+            - 'PEB3'
+            - 'PEB4'
+            - 'PEB5'
+            - 'PEB6'
+            - 'TDE1'
+            - 'TDE2'
+            - 'TDE3'
+            - 'TDE4'
+            - 'TDE5'
+            - 'TDE6'
+    scheme: file
