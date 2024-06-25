@@ -3,6 +3,11 @@ from sqlalchemy import text
 
 engine = create_engine('sqlite+pysqlite:///:memory:',echo=True)
 
+# See https://stackoverflow.com/a/53820171/11755155
+
+# for att in dir(your_object):
+#     print (att, getattr(your_object,att))
+
 with engine.connect() as conn:
     result = conn.execute(text("select 'hello world'"))
     print(result.all())
