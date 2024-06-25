@@ -9,6 +9,7 @@ your_token = os.getenv("SYDLE-TOKEN")
 headers = {
     "Authorization": f"Bearer {your_token}"
 }
+
 data_dict = {
   "nome": "Frederico Assis",
   "cPF": "360.365.170-76",
