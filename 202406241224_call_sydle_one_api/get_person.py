@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import json
 load_dotenv()
 
-api_url = "https://sydle-c12404o-treinamento.sydle.one/api/1/crmgabrieldornas/one.sydle_treinamento.sydle.crm/PessoaGabrielDornas/_get"
+api_url = "https://sydle-c12404o-treinamento.sydle.one/api/1/crmgabrieldornas/one.sydle_treinamento.sydle.crm/PessoaGabrielDornas/_search/"
 your_token = os.getenv("SYDLE-TOKEN")
 headers = {
     "Authorization": f"Bearer {your_token}"
@@ -14,6 +14,14 @@ response = post(
     api_url,
     headers=headers,
 )
+
+data_dict = {
+  "nome": "Frederico Assis",
+  "cPF": "360.365.170-76",
+  "sexo": "masculino",
+}
+
+# size por padrão é 10
 
 import ipdb;ipdb.set_trace(context=10)
 if response.status_code == 200:
