@@ -1,0 +1,3 @@
+[tool.taskipy.tasks]
+image = { cmd = "docker build . --file Dockerfile --tag gabrielbdornas/speech-to-text:latest", help = "Build Docker image." }
+container = { cmd = "docker run -it --rm -v /$PWD:/work_dir gabrielbdornas/speech-to-text:latest bash", help = "Start Docker container." }
