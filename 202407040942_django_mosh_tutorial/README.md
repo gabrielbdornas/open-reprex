@@ -18,3 +18,7 @@
   - Included the `path('playgrond/', include('playgrond.urls'))` at the `playground/urls.py` (`urlpatterns`) folder in the `storefront/urls.py` file. Need to import the include module (`from django.urls import include`).
 
 - Always end a route with `/`.
+
+- Add the `playground/templates` folder with a `hello.html` file. and now, the `say_hello` function at the `view` folder must return `render(request, 'hello.html')`.
+
+- 
